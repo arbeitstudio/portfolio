@@ -1,0 +1,135 @@
+<!-- Close the world, .txen eht nepO -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>arbeit studio</title>
+
+    <style>
+        @font-face {
+            font-family: 'Urbanist';
+            src: url('Urbanist.ttf');
+            font-weight: 100 900;
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            background: url('bg.svg') center center fixed;
+            padding: clamp(10px, 5vw, 100px) clamp(10px, 5vh, 100px);
+            box-sizing: border-box;
+
+            color: white;
+            font-family: 'Urbanist', sans-serif;
+        }
+
+        section {
+            position: relative;
+            height: 100%;
+            height: -webkit-fill-available;
+        }
+
+        h1, p {
+            margin: 0;
+        }
+
+        #brand {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+
+            color: #A2FF08;
+            font-size: 48px;
+        }
+
+        #tagline {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            font-size: clamp(48px, 10vw, 148px);
+        }
+
+        #description {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+
+            font-size: clamp(16px, 5vw, 20px);
+
+            margin: clamp(150px, 10vw, 275px) 0 0 0;
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+        }
+
+        #link-container {
+            position: absolute;
+            top: 0;
+            left: 50%;
+        }
+
+        #links {
+            left: 50%;
+
+            display: flex;
+            flex-direction: column;
+
+            row-gap: 16px;
+
+            a > img {
+                width: 30px;
+                height: auto;
+            }
+
+            &::before {
+                position: absolute;
+                margin-top: -24px;
+                left: -24px;
+                height: 5px;
+                width: 216px;
+                content: '';
+                background: linear-gradient(270deg, #A2FF08 -48.98%, #A2FF08 -48.98%, #2C7DAA 100%);
+                transform: rotate(90deg);
+                transform-origin: left;
+                transform-box: content-box;
+            }
+
+            &:first-child {
+                margin-top: 16px;
+            }
+        }
+
+        a, .no-highlight {
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1 id="brand" class="no-highlight">arbeit studio</h1>
+        <h1 id="tagline" class="no-highlight">unforeseen<br>improvements</h1>
+        <p id="description">Arbeit Studio is a pioneering, <u>forward-thinking</u> initiative at the forefront of modern innovation in the realm of information technologies. Rooted in a strong commitment to <u>the philosophy of free software</u>, Arbeit Studio envisions a future where technology is accessible, inclusive, and serves the greater good of humanity.</p>
+    </section>
+    <div id="link-container">
+        <nav id="links">
+            <a href="https://x.com/arbeitstudio"><img src="genesis/logos/x_white.svg"></a>
+            <a href="https://instagram.com/arbeitstudio"><img src="genesis/logos/instagram_white.svg"></a>
+            <a href="https://www.linkedin.com/company/arbeitstudio"><img src="genesis/logos/in_white.svg"></a>
+            <a href="https://behance.net/arbeitstudio"><img src="genesis/logos/behance_white.svg"></a>
+        </nav>
+    </div>
+</body>
+</html>
+<!-- arbeit studio: building the next generation of the Web. -->
