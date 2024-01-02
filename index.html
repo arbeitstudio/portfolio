@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, interactive-widget=resizes-content">
+    <meta name="viewport" content="width=device-width, initial-scale=1, interactive-widget=overlays-content">
     <meta name="description" content="Arbeit Studio is a pioneering design and web development studio, specializing in blockchain, system design and turnkey IT solutions.">
     <meta name="author" content="arbeit studio">
     <title>arbeit studio</title>
@@ -80,6 +80,17 @@
             margin: 0;
         }
 
+        a, .no-highlight {
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            text-decoration: none;
+        }
+
         #brand {
             position: absolute;
             top: 0;
@@ -141,7 +152,6 @@
                 background: linear-gradient(270deg, #A2FF08 -48.98%, #A2FF08 -48.98%, #2C7DAA 100%);
                 transform: rotate(90deg);
                 transform-origin: left;
-                transform-box: content-box;
             }
 
             &:first-child {
@@ -156,7 +166,7 @@
             font-weight: 400;
 
             a {
-                background-image: linear-gradient(90deg, #A2FF08 19.51%, #2C7DAA 88.01%);
+                background: linear-gradient(90deg, #A2FF08 19.51%, #2C7DAA 88.01%);
                 background-clip: text;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
@@ -218,16 +228,6 @@
                 top: 160px;
                 right: calc(-1 * clamp(10px, 5vw, 100px));
             }
-        }
-
-        a, .no-highlight {
-            -webkit-tap-highlight-color: transparent;
-            -webkit-touch-callout: none;
-            -webkit-user-select: none;
-            -khtml-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
         }
     </style>
 </body>
