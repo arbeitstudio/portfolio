@@ -130,6 +130,52 @@
             }
         }
 
+        @media screen and (max-width: 750px) {
+            #tagline {
+                writing-mode: vertical-rl;
+                transform: rotate(180deg);
+            }
+
+            #description {
+                margin: 300px 0 0 0;
+            }
+
+            #link-container {
+                top: 250px;
+                left: unset;
+                right: 0;
+            }
+
+            #links {
+                flex-direction: row;
+                align-items: center;
+                column-gap: 16px;
+
+                &::before {
+                    margin-top: -64px;
+                    left: unset;
+                    right: 0;
+                    content: '';
+                    background: linear-gradient(270deg, #A2FF08 -48.98%, #A2FF08 -48.98%, #2C7DAA 100%);
+                    transform: rotate(180deg);
+                    transform-origin: center;
+                }
+
+                &:first-child {
+                    margin-top: 0;
+                }
+
+                &:last-child {
+                    margin-right: 16px;
+                }
+            }
+
+            #email {
+                top: 160px;
+                right: calc(-1 * clamp(10px, 5vh, 100px));
+            }
+        }
+
         a, .no-highlight {
             -webkit-tap-highlight-color: transparent;
             -webkit-touch-callout: none;
