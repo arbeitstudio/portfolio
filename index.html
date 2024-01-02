@@ -32,7 +32,7 @@
             height: -webkit-fill-available;
         }
 
-        h1, p {
+        h1, h2, p {
             margin: 0;
         }
 
@@ -105,6 +105,31 @@
             }
         }
 
+        #email {
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-weight: 400;
+
+            a {
+                background: linear-gradient(90deg, #A2FF08 19.51%, #2C7DAA 88.01%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-weight: 600;
+
+                &:hover::after {
+                    content: '';
+                    background: linear-gradient(90deg, #A2FF08 19.51%, #2C7DAA 88.01%);
+                    position: absolute;
+                    right: 0px;
+                    bottom: -2px;
+                    width: 82%;
+                    height: 2px;
+                }
+            }
+        }
+
         a, .no-highlight {
             -webkit-tap-highlight-color: transparent;
             -webkit-touch-callout: none;
@@ -121,6 +146,7 @@
         <h1 id="brand" class="no-highlight">arbeit studio</h1>
         <h1 id="tagline" class="no-highlight">unforeseen<br>improvements</h1>
         <p id="description">Arbeit Studio is a pioneering, <u>forward-thinking</u> initiative at the forefront of modern innovation in the realm of information technologies. Rooted in a strong commitment to <u>the philosophy of free software</u>, Arbeit Studio envisions a future where technology is accessible, inclusive, and serves the greater good of humanity.</p>
+        <h2 id="email" class="no-highlight">Say <a href="mailto:hello@arbeit.studio">hello@arbeit.studio</a></h2>
     </section>
     <div id="link-container">
         <nav id="links">
