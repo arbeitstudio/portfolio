@@ -1,5 +1,18 @@
 {
   "projects": {
     "default": "arbeitlanding"
-  }
+  },
+  "targets": {
+    "arbeitlanding": {
+      "hosting": {
+        "arbeitlanding": [
+          "arbeitlanding"
+        ],
+        "arbeitgit": [
+          "arbeitgit"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }

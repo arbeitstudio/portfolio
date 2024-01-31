@@ -1,10 +1,12 @@
 {
-	"hosting": {
-		"arbeit.studio": {
+	"hosting": [
+    {
+      "target": "arbeitlanding",
 			"public": "public",
 			"ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
 		},
-		"git.arbeit.studio": {
+		{
+      "target": "arbeitgit",
 			"redirects": [
 				{
 					"source": "**",
@@ -13,5 +15,5 @@
 				}
 			]
 		}
-	}
+  ]
 }
