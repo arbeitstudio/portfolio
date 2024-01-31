@@ -1,0 +1,158 @@
+//
+//    Anticverse Webraider
+//
+//    Maintainer: Ferit Yiğit BALABAN <balaban.ferityigit@anticverse.com> <fybalaban@fybx.dev>
+
+@use "sass:math";
+@use "../variables";
+@use "../colors";
+@use "../overflows";
+
+#footer {
+  background-color: #8855bd;
+  color: #f2f2f2;
+
+  .footer-row {
+    display: flex;
+    align-items: center;
+
+    img[data-image-form="square"] {
+      width: 60px;
+      height: 60px;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin: 0 0 0 16px;
+    }
+
+    h2 {
+      font-weight: normal;
+      margin: 0 0 0 16px;
+    }
+
+    &:nth-of-type(2) {
+      align-items: unset;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      gap: 5%;
+    }
+
+    @media screen and (min-width: 1000px) {
+      #footer .footer-row:nth-of-type(2) {
+        justify-content: space-between;
+      }
+    }
+
+    &:last-of-type {
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  }
+
+  .footer-col {
+    display: flex;
+    flex-direction: column;
+
+    ul {
+      margin: 0;
+    }
+
+    li {
+      a {
+        color: inherit;
+        text-underline-offset: 2px;
+        text-decoration-thickness: 1px;
+        margin: 0 0 4px 0;
+
+        &:hover {
+          color: #fff;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  hr {
+    margin: clamp(16px, 1vh, 48px) 0;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3137254902);
+  }
+
+  @media screen and (min-width: 500px) {
+    #footer .footer-row img[data-image-form="square"] {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  img[data-image-form="grow-width"] {
+    height: 30px;
+  } 
+
+  @media screen and (min-width: 500px) {
+    #footer .footer-row img[data-image-form="grow-width"] {
+      height: 50px;
+    }
+  }
+
+  @media screen and (min-width: 500px) {
+    #footer .footer-row h1 {
+      font-size: 32px;
+    }
+  }
+
+  
+
+
+
+
+  @include overflows.mx_width800 {
+    padding: math.div(variables.$site-lr-padding200, 2) variables.$site-lr-padding200 * 2;
+  }
+
+  @include overflows.mx_width1200 {
+    padding: math.div(variables.$site-lr-padding, 4) variables.$site-lr-padding * 2;
+  }
+
+  nav {
+    display: none;
+    font-weight: 400;
+
+    a {
+      margin-right: 1em;
+
+      img {
+        width: clamp(30px, 1vw, 100px);
+      }
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+
+    &:last-of-type {
+      display: inline-flex;
+      align-items: center;
+    }
+
+    @include overflows.mx_width800 {
+      display: inline-flex;
+
+      &:last-of-type {
+        display: none;
+      }
+    }
+  }
+
+  h1 {
+    color: colors.$cl-light500;
+    font-weight: 100;
+    font-size: 16px;
+
+    span {
+      color: colors.$cl-light100;
+      font-weight: 600;
+    }
+  }
+}

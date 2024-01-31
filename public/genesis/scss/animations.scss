@@ -1,0 +1,89 @@
+//
+//    Arbeit Studio
+//
+//    Maintainer: Ferit Yiğit BALABAN <fyb@fybx.dev>
+@use "keyframes";
+
+$veryfast: 1s;
+$fast: 1.5s;
+$normal: 2s;
+$slow: 2.5s;
+$veryslow: 3s;
+
+@each $timing, $duration in (veryfast: $veryfast, fast: $fast, normal: $normal, slow: $slow, veryslow: $veryslow) {
+  .timing-#{$timing} {
+    transition-duration: $duration !important;
+  }
+}
+
+.anim-slide-down-appear, .anim-slide-right-appear, .anim-slide-up-appear, .anim-appear {
+  opacity: 0;
+  transition: opacity ease-out, filter ease-out, transform ease-out;
+  transition-duration: $normal;
+}
+
+.anim-slide-down-appear {
+  transform: translateY(-100%);
+}
+
+.anim-slide-right-appear {
+  transform: translateX(-100%);
+}
+
+.anim-slide-up-appear {
+  transform: translateY(+100%);
+}
+
+.slide-down-appear, .slide-right-appear, .slide-up-appear, .appear {
+  opacity: 1;
+}
+
+.slide-down-appear, .slide-up-appear {
+  transform: translateY(0);
+}
+
+.slide-right-appear {
+  transform: translateX(0);
+}
+
+.anim-slide-in-place-right {
+  transform: scaleX(0);
+  transition: transform ease-out;
+  transition-duration: $normal;
+}
+
+.slide-in-place-right {
+  transform: scaleX(1);
+}
+
+.anim-gallery-staggered-appear {
+  > * {
+    opacity: 0;
+    transition: opacity ease-out;
+    transition-duration: $normal;
+  }
+}
+
+.staggered-appear {
+  opacity: 1;
+}
+
+.anim-slide-left-appear {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: opacity ease-out, transform ease-out;
+  transition-duration: $normal;
+}
+
+.slide-left-appear {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.glow-opacity {
+  animation: opacity-change $normal infinite;
+}
+
+.glow-saturation {
+  animation: saturation-change $normal infinite;
+}
