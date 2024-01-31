@@ -1,8 +1,8 @@
 # arbeitstudio/portfolio
 
-| Branch | Endpoint/s                                   |
-| ------ | -------------------------------------------- |
-| `main` | [webraider.dev][0] & [https://arbeit.studio] |
+| Branch | Endpoint/s                                      |
+| ------ | ----------------------------------------------- |
+| `main` | [webraider.dev][0] & [https://arbeit.studio][1] |
 
 This project uses [The Genesis Framework][llgenesis], a free and open source front-end framework for the next generation of the Web.
 
