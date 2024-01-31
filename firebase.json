@@ -1,10 +1,17 @@
 {
-  "hosting": {
-    "public": "public",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ]
-  }
+	"hosting": {
+		"arbeit.studio": {
+			"public": "public",
+			"ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+		},
+		"git.arbeit.studio": {
+			"redirects": [
+				{
+					"source": "**",
+					"destination": "https://github.com/arbeitstudio/**",
+					"type": 301
+				}
+			]
+		}
+	}
 }
