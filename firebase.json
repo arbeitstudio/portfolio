@@ -3,14 +3,15 @@
     {
       "target": "arbeitlanding",
 			"public": "public",
-			"ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+			"ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+			"cleanUrls": "true"
 		},
 		{
       "target": "arbeitgit",
 			"redirects": [
 				{
-					"source": "**",
-					"destination": "https://github.com/arbeitstudio/**",
+					"source": "/:repo*",
+					"destination": "https://github.com/arbeitstudio/:repo",
 					"type": 301
 				}
 			]
