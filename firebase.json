@@ -1,14 +1,19 @@
 {
 	"hosting": [
-    {
-      "target": "arbeitlanding",
+		{
+			"target": "arbeitlanding",
 			"public": "public",
 			"ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
 			"cleanUrls": "true"
 		},
 		{
-      "target": "arbeitgit",
+			"target": "arbeitgit",
 			"redirects": [
+				{
+					"source": "/",
+					"destination": "https://github.com/arbeitstudio",
+					"type": 301
+				},
 				{
 					"source": "/:repo*",
 					"destination": "https://github.com/arbeitstudio/:repo",
@@ -16,5 +21,5 @@
 				}
 			]
 		}
-  ]
+	]
 }
